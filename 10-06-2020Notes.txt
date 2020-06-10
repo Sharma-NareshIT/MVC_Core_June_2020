@@ -1,0 +1,39 @@
+WebForm Architecture
+MVC Architecture
+
+Model
+- It is a collection of classes that represent the data we are working with as well as the business.
+- It handles interactions with Data - CRUD
+- Model comprises of POCO [Plain-Old CLR Objects] which are uses in ORM.
+- Model is just like a Data Access Layer.
+- Model may contain Data Validation Rules.
+- Apart from providing data objects model have no significance in this framework.
+
+
+View:
+- It represents UI
+- It is a template that dynamically renders HTML
+- In ASP.NET view is a page, user control, master page
+- It is controlled by a View Engine.
+		ASPX, 	<% %>  .aspx, .ascx
+		SPARK
+		NHAML
+		Django
+		Razor 	@{ }   .cshtml, .vbhtml
+- ASP.NET MVC uses Razor
+	ASPX		Razor
+	Pages		→ Views
+	User Controls	→ Partial Views
+	Master Pages	→ Layouts
+
+
+Controller:
+- It is a class 
+- It comprises of application specific logic
+- It is the core component of MVC framework
+- It handle overall application flow.
+- Handling interaction between the model and view.
+- Controller class comprises of methods that respond to client request.
+
+		
+		
