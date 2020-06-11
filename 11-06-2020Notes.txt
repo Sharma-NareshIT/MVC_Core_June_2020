@@ -1,0 +1,48 @@
+WebForms → Resource Request
+   http://localhost/site/page.aspx
+
+MVC → Delegate Request [Function Pointer]
+
+   http://localhost/site/controllerName/method
+   http://localhost/site/products/details - GET
+
+	ASP.NET WebForm vs ASP.NET MVC
+	===============================
+
+ASP.NET WebForm		ASP.NET MVC
+---------------------------------------------------------------------------------------
+1. WebForm uses a 		It uses Front controller
+    Page controller		pattern.
+    pattern.			All pages can be handled
+    Every Page have its	by using a single controller
+    own controller class	class.
+----------------------------------------------------------------------------------------
+2. WebForm require a 	No  Page Cycle, No Page
+    Page Cycle and uses	Events.
+    Page Events.
+----------------------------------------------------------------------------------------
+3. WebForms Require lot 	No ViewState
+    of ViewState.
+----------------------------------------------------------------------------------------
+4. WebForms will not support	 Supports complete HTML
+    complete HTML. Lot of	
+    Server Side Controls and
+    Interactions.
+---------------------------------------------------------------------------------------
+5. WebForms are Heavy            Razor Pages a lightweight
+----------------------------------------------------------------------------------------
+6. Slow and not suitable for     Fast and run on any device
+    low bandwidth devices.	i.e from browser to mobile.
+----------------------------------------------------------------------------------------
+7. Hard to test and extend	Easy to test
+8. Will not support TDD	Supports TDD
+9. Unit Testing hard		Unit Testing is Easy
+10. WebForm support	Not RAD
+          "RAD"
+
+
+
+
+
+
+
