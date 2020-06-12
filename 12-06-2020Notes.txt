@@ -1,0 +1,128 @@
+Versions 
+- ASP.NET MVC 5 
+- ASP.NET MVC Core 3.1     
+
+	
+		ASP.NET MVC 5
+Minimum Requirements:
+-----------------------------------
+.NET Framework 4.5 +
+ASP.NET 4.5
+C# 6
+Visual Studio 2015
+
+Advanced
+---------------
+.NET Framework 4.7
+ASP.NET 4.7
+C# 7, 8
+Visual Studio 2019  - Community
+
+		"Download VS 2019"
+https://visualstudio.microsoft.com/downloads/
+
+.NET 
+    - .NET Framework  [for windows, not open source]
+    - .NET Core Framework [any OS, open source]
+
+	               ASP.NET MVC 5
+1. Open Visual Studio
+2. Create a new Project
+3. Select Template
+	"ASP.NET Web Application (.NET Framework)"
+
+4. Project Details
+	Name		: Mvc5Demo
+	.NET Framework	: 4.7.2
+
+5. Select ASP.NET template as
+	"Empty"
+	
+        Authentication		  : No Authentication
+       Core References & Folders :   MVC [System.Web.Mvc]
+       Advanced		  :  Configure for Https
+       Docker		  : No
+       Unit Tests		  : No
+
+
+Project File Structure:
+--------------------------------
+
+Connected Services	 : The 3rd party services used
+		    by your project.
+
+Properties	: The meta data.
+
+References	: The packages and library required
+		   for application.
+
+App_Data		: It comprises of local database files
+		  ".mdf, .sdf".
+
+App_Start		: It comprises of classes that are 
+		  intended to run on application
+		  startup.
+		  BundlingConfig.cs
+		  FilterConfig.cs
+		  StartupAuth.cs
+		  RouteConfig.cs [default]
+
+Controllers	: Comprises of controller classes that
+		  define application logic.
+
+Models		: Comprises of Model classes that
+		  define business logic[data logic]
+
+Views		: Comprises of UI, which includes
+		   - Views
+		   - PartialViews
+		   - Layouts
+
+Global.asax	: It is global application class file.
+
+Packages.config	: It contains the list of packages 		  installed for project and their versions.
+
+Web.Config	: It is application configuration file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
