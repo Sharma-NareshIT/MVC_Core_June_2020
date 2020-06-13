@@ -1,0 +1,72 @@
+Routing
+    App_Start
+    |_RouteConfig.cs
+
+ routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+Creating a new Controller for MVC Application:
+--------------------------------------------------------------------
+- Controller is a class
+- It comprises of application specific logic
+- It handles the over all communication between Model and View.
+- There are 2 ways for adding a controller into your application:
+	a) You can add by using Scaffolding
+	b) You can add by using Explicit Method
+
+- Every Controller class is a C# class in MVC with mandatory suffix "Controller".
+
+- Every Controller class must implement "Controller" base class defined in "System.Web.Mvc".
+
+Adding a Controller Explicitly:
+=========================
+1. Right Click on Controllers folder
+2. Add → New → Class
+
+	Name : HomeController.cs
+
+3. Extend by using "Controller" base
+
+using System.Web.Mvc;
+
+namespace Mvc5Demo.Controllers
+{
+    public class HomeController : Controller
+    {
+    }
+}
+
+
+Contracts [Interfaces] → Templates [Abstract] → Components [Classes]
+
+IController		→Contract
+ |_ControllerBase		→Template
+    |_Controller		→Template
+       |_HomeController	→Component
+
+Interfaces [Contracts] are Implemented
+Classes are Extended
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
