@@ -1,0 +1,80 @@
+Creating a new MVC 5 Application
+Project Infrastructure
+Add Controllers
+- Controller is a C# class
+- must have suffix Controller
+- Controller : ControllerBase : IController
+- System.Web.Mvc 
+
+Adding Controller into MVC Project with Scaffold Technique:
+
+C#   -  Anders Hejlsberg  - Delphi 
+ASP.NET  - Scott Guthrie - Ruby - Scaffolding
+
+It is a technique that can generate the logic and UI for your requirements. It can track the dependencies and register them with your application automatically.
+
+Ex:
+1. Right Click on Controllers
+2. Goto "Add → New → Controller"
+3. Select
+	"MVC 5 Empty Controller"
+4. Name
+	ProductsController
+
+
+		    Action Methods
+- Action method is a special type of method in controller class that handles the request from client, process the request and sends response back to client.
+
+-Controller is a C# class
+-It can contain both Action Methods and Non-Action Methods.
+-To design any action method you have follow the rules for configuring Action method.
+
+1. Every Controller action method must be public in access.
+
+  Q: Can a controller have private, protected or internal methods?
+  A: Yes. But they are not considered as Action Methods.
+
+  Q: Why a controller method must be public in access?
+  A: As client request will be from URL, it must be public in access.
+          http://localhost/site/controller/method
+
+2. Action method can't be a static method. It must be a non-static method.
+  
+  Q: Why?
+  A: Request over Http is stateless. It can't use continous memory. It needs discrete memory. Static uses continous memory. Hence action method can't be static.
+
+3. Action method must return a value.
+4. It must be defined with a return type.
+5. It can't be void.
+6. It can't have ref or out params.
+
+ Q: Why an action method should return value?
+ A: As it handles request from client , it must send a response back to client.
+
+ Q: Can an action method return any type of value? Can i reutrn a number or boolean or array?
+ A: Yes
+
+7. Action method can be parameterized or parameterless.
+
+           public  string  Hello(string name) 
+           {
+                    return "Hello ! "  + name;
+           }
+          http://localhost/site/home/hello?name=john
+
+8. Action method can't be a generic method and it can't have generic parameters.
+
+         public string hello<T>(T a, T b) {
+
+         }
+ 
+   Q:Why?
+   A: Generic is type safe and is intended to transform. Action method can't transform.
+
+9. Action method can overload. But it can't override.
+    Overload to handle various requests.
+    Override is re-defining the functionality, which is not possible.
+
+10. Action method can't be marked with "NonAction" atrribute.
+
+     
