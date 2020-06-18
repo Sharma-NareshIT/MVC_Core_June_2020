@@ -1,0 +1,82 @@
+- Controller
+- Action Method
+	             Action Results in MVC
+	             ---------------------------------
+- ActionResult specifies the actions to be performed by an controller action method. It defines functionality for action method which includes, returning a view, partial view, file, JSON, redirection etc..
+
+-ActionResult controls the behavior of Action method.
+
+-It encapsulates the result of any action method and performs functionality on behalf of action method.
+
+-Action Result performs framework level operation.
+
+-All Action Results in MVC 5 are derived from "ActionResult" base class, which is defined in "System.Web.Mvc"
+
+ActionResult		Helper Method
+==================================================
+ViewResult		View()
+PartialViewResult		PartialView()
+FileResult			File()
+JsonResult		Json()
+RedirectResult		Redirect()
+RedirectionToRouteResult	RedirectToAction()
+ContentResult		Content()
+JavaScriptResult		JavaScript()
+
+		      HttpVerbs
+- Every controller action method by default responds to "GET" request.
+- HttpVerbs annotation [attribute] is used to defined the request type that an controller action method must respond to i.e GET, POST, PUT, DELETE.
+- HttpVerbs is assigned to controller method by using "AcceptVerbs"
+
+ Syntax:
+	[AcceptVerbs(HttpVerbs.Post)]
+		    (or)
+	[HttpPost]
+
+
+		      ViewResult
+- ViewResult defines an action result that sends a View (Page) as response for client request.
+
+- View() is an Helper method for ViewResult.
+
+- ViewResult is derived for ViewResultBase, which is implementing "ActionResult" base.
+
+- ViewResult is handled by using the objects of 
+	a) IViewEngine
+	b) IView
+
+- IViewEngine
+     * It have collection of ViewEngines installed for your
+       application.
+     * MVC by default configured with "ASPX & Razor" engines
+     * MVC 5 be default uses Razor Engine and ASPX engine is disabled.
+     * IViewEngine Object loads all ViewEngines that are supported by your application.
+
+- IView
+    * IView object finds the view required for controller action
+      method.
+    * It loads the view into ViewEngine
+    * ViewEngine will process and render a HTML response
+      to client. 
+
+Note: ViewEngine dynamically renders HTML
+
+- ViewResult - View()  looks for the View with same name as "ActionMethod" name in the following locations.
+
+	            Index() 
+	            Index.cshtml
+
+- Where it looks for the View?
+
+                      Project
+	     |_Views
+	        |_Products    [Products Controller Views]
+	           |_index.cshtml
+	        |_Home          [Home Controller Views]
+	        |_Shared        [Global in access]
+	           |_index.cshtml
+
+
+
+
+
